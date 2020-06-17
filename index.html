@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Sistema de Gestão de Patrimônio </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <aside class="dashboard">
+        <div class="logo">
+            <a class="logo"> Sistema de Gestão </a>
+        </div>
+        <div class="user">
+            <i class="material-icons">person</i>
+            <p> Admin </p>
+        </div>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="material-icons">home</i>
+                    <p> Home </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="material-icons">description</i>
+                    <p> Cadastro </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="material-icons">find_in_page</i>
+                    <p> Busca </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="material-icons">trending_up</i>
+                    <p> Relatório </p>
+                </a>
+            </li>
+        </ul>
+
+    </aside>
+    <nav class="navbar">
+        <div class="icon"> <i class="material-icons">notifications</i> </div>
+        <div class="icon"> <i class="material-icons">exit_to_app</i> </div>
+    </nav>
+    <main class="main-panel">
+        <div class="container-cadastro">
+            <h1 class="text-cadastro"> Cadastro </h1>
+            <form action="javascript:addTable();">
+                <label for="num"> Número: </label>
+                <input id="num" name="num" type="text" placeholder="Digite o número" pattern="\d+" required>
+                <label for="desc"> Descrição: </label>
+                <input id="desc" name="desc" type="text" placeholder="Digite a descrição" required>
+                <label for="estado"> Estado: </label>
+                <select id="estado" name="estado">
+                    <option> Excelente </option>
+                    <option> Bom </option>
+                    <option> Regular </option>
+                    <option> Péssimo </option>
+                    <option> Insersível </option>
+                </select>
+                <label for="situacao"> Situação: </label>
+                <input id="situacao" name="situacao" type="text" placeholder="Digite a situação" required>
+                <label for="localizacao"> Localização: </label>
+                <input id="localizacao" name="localizacao" type="text" placeholder="Digite a localização" required>
+                <label for="corresponsavel"> Corresponsável: </label>
+                <input id="corresponsavel" name="corresponsavel" type="text" placeholder="Digite o Corresponsável" required>
+                <button id="cadastrar" class="btn-cadastro"> Cadastrar </button>
+                <input id="limpar" class="btn-cadastro" value="Limpar" type="reset">
+            </form>
+        </div>
+        <div class="container-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th> Número </th>
+                        <th> Descrição </th>
+                        <th> Estado </th>
+                        <th> Situação </th>
+                        <th> Localização </th>
+                        <th> Corresponsável </th>
+                    </tr>
+                </thead>
+                <tbody id="table-info">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>
